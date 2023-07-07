@@ -14,21 +14,16 @@ class HuffmanNode {
         void SetLeft(HuffmanNode* node);
         void SetRight(HuffmanNode* node);
         int GetFrequency();
-        char GetCharacter();
+        TypeUTF8 GetUTF8();
+        TypeItem GetItem();
         HuffmanNode* GetLeft();
         HuffmanNode* GetRight();
 
     private:
-        TypeItem Character;
+        TypeItem CharacterUTF8;
         HuffmanNode *left;
         HuffmanNode *right;
 };
-
-HuffmanNode* buildHuffmanTree(TypeItem* characteres, int size);
-
-void WriteHuffmanCode(HuffmanNode* root, std::string* codes);
-
-void HuffmanCodeToTree(HuffmanNode* root, int* position, std::string* codes);
 
 
 #endif
